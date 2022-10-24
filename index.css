@@ -1,0 +1,203 @@
+@font-face {
+    font-family: Smythe;
+    src: url('/smythe-v23-latin/smythe-v23-latin-regular.woff2') 
+
+  }
+
+body {
+    margin: 0;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px rgb(124, 92, 49) solid;
+    border-radius: 20px;
+    font-family: Smythe;
+    font-weight: 400;
+}
+
+header{
+    margin-top: -1px;
+    margin-right: -1px;
+    margin-left: -1px;;
+    background-image: url('/images/header.png');
+    height: 165px;
+    color:#FFFFFF;
+    border-radius: 15px 15px 0 0;
+    padding-left: 46px;
+    
+    
+
+}
+
+header > h1{
+    margin-top: 0;
+    padding-top: 35px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-style: normal;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+header > h3{
+    font-size: 22.4216px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.container{
+    padding: 45px;
+    font-weight: 400;
+}
+
+.eachItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #D2D2D2;;
+}
+
+.eachItem-details{
+    font-weight: 400;
+}
+
+.name{
+    font-size: 28px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.ingredients{
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+}
+
+.price{
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+form{
+    position: fixed;
+    display: none;
+    top: 290px;
+    background: #FFFFFF;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3.88991px;
+    border: 1.5px solid #757575;
+}
+
+form >div> h1{
+    margin-bottom: 50px;
+}
+
+.formdiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 524px;
+    height: 542.24px;
+    border-radius: 3.88991px;  
+}
+
+.yourOrderDiv{
+    border:3px  red solid;
+}
+
+.yourOrderDiv > h1{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listedItems{
+    display: flex;
+    justify-content: space-between;
+}
+#toCheckOut{
+    border-bottom: 2px solid #393333;
+    padding-bottom:5px;
+}
+
+#total{
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+
+input, button{
+    width: 475.91px;
+    height: 71.3px;
+    margin: 10px auto;
+    
+    border-radius: 3.88991px;
+}
+
+input{
+    border: 2.5px solid #757575;
+}
+
+button{
+    background: #16DB99;
+    
+    color: #FFFFFF;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    border: none;
+}
+
+#thanks{
+    display: none;
+    background: #ECFDF5;
+    padding-top: 30px;
+    margin-bottom: -10px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+    text-align: center;
+    width: 504px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 17px;
+    color:#058057
+
+}
+
+.emoji{
+    font-weight: 400;
+    font-size: 78.72px;
+    line-height: 98px;
+    width: 90px;
+    margin-top: 20px;
+}
+
+
+
+
+.regular{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1.5px #DEDEDE solid;
+    border-radius: 50%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 24px;
+    text-align: center;
+    color: #3C3C3C;
+    padding-top: 15px;
+    padding-bottom: 0;
+    margin-top: 10px;
+    
+}
+
+.regular:hover{
+    cursor:pointer;
+}

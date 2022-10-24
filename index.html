@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- css file -->
+        <link rel="stylesheet" href="index.css">
+        <!-- fontawesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Weles Diner</title>
+    </head>
+    <header>
+        <h1 class="headertext">Jimmy's Diner</h1>
+        <h3 class="heartext">The best burgers and pizzas in town</h3>
+    </header>
+    <div class="container">
+        <div id="items">
+
+        </div>
+        <div id="ordered-items">
+
+        </div>
+
+        <form action="">
+            <div class="formdiv">
+                <h1>Enter card details</h1>
+                <input type="text" name="name" id="name" required placeholder="Enter your name">
+                <input type="text" name="cardnumber" id="cardnumber" required placeholder="Enter card number">
+                <input type="text" name="cvv" id="cvv" required placeholder="Enter cvv">
+                <button id="pay">Pay</button>
+            </div>
+        </form>
+        <h1 id="thanks">Thanks, James! You order is on its way</h1>
+        <div class="yourOrderDiv">
+            <h1>Your Order</h1>
+            <div id="toCheckOut">
+
+            </div>
+            <div id="total">
+
+            </div>
+            <button id="pay">Complete Order</button>
+        </div>
+    </div>
+    <body>
+	<script src="index.js" type="module"></script>
+    </body>
+    
+</html>
+
