@@ -24,6 +24,8 @@ document.body.addEventListener('click', function(e){
         handleRemove(e.target.dataset.rkey)
     } else if (e.target.dataset.pay){
         handlePay()
+    } else if (e.target.dataset.reduce){
+        handleReduce(e.target.dataset.reduce)
     }
     
 })
@@ -93,6 +95,73 @@ function handleIncrement(id){
         </div>
         `
         total +=itemObj.price
+    }
+    
+    renderYourOrder()
+}
+function handleReduce(id){
+    thanksMessage.style.display='none' //closing if it previous open
+    id=parseInt(id)
+    const itemObj = menuArray.filter(item=>
+        item.id === id)[0]    
+    if(id===0 && pizzaCount>0){
+        
+        pizzaCount--
+        pizzaHtml = `
+        <div class="listedItems">
+            <span class="eachItem-details name">${itemObj.name} <span class="eachItem-details ingredients remove" data-rkey="${id}">remove</span></span> 
+            <span>$${itemObj.price*pizzaCount}</span>
+        </div>
+        `
+        if(pizzaCount>=0){
+            total -=itemObj.price
+            if(total<0){
+                total=0
+            }
+        }
+        
+    } else if (id===1 && burgerCount>0){
+        burgerCount--
+        burgerHtml = `
+        <div class="listedItems">
+            <span class="eachItem-details name">${itemObj.name} <span class="eachItem-details ingredients remove" data-rkey="${id}">remove</span></span> 
+            <span>$${itemObj.price*burgerCount}</span>
+        </div>
+        `
+        if(burgerCount>=0){
+            total -=itemObj.price
+            if(total<0){
+                total=0
+            }
+        }
+    } else if (id===2&& friesCount>0){
+        friesCount--
+        friesHtml = `
+        <div class="listedItems">
+            <span class="eachItem-details name">${itemObj.name} <span class="eachItem-details ingredients remove" data-rkey="${id}">remove</span></span> 
+            <span>$${itemObj.price*friesCount}</span>
+        </div>
+        `
+        if(friesCount>=0){
+            total -=itemObj.price
+            if(total<0){
+                total=0
+            }
+        }
+    } else if (id===3 && mocktailCount>0){
+        mocktailCount--
+        mocktailHtml = `
+        <div class="listedItems">
+            <span class="eachItem-details name">${itemObj.name} <span class="eachItem-details ingredients remove" data-rkey="${id}">remove</span></span> 
+            <span>$${itemObj.price*mocktailCount}</span>
+        </div>
+        `
+        if(mocktailCount>=0){
+            total -=itemObj.price
+            if(total<0){
+                total=0
+            }
+        }
     }
     
     renderYourOrder()
@@ -168,6 +237,7 @@ function renderYourOrder(){
     </div>`
     document.getElementById('toCheckOut').innerHTML = pizzaHtml+burgerHtml+friesHtml+mocktailHtml
     document.getElementById('total').innerHTML = orderHtml
+   
 }
 
 function getHTML(){
@@ -182,7 +252,10 @@ function getHTML(){
                 <p class="eachItem-details ingredients">${item.ingredients}</p>
                 <h3 class="eachItem-details price">$${item.price}</h3>
             </div>
+            <div>
             <div class="regular" data-key="${item.id}" >+</div>
+            <div class="regular" data-reduce="${item.id}" >-</div>
+            </div>
         </div>    
         `)
 
