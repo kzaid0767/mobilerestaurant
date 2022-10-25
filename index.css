@@ -61,6 +61,15 @@ header > h3{
     font-weight: 400;
 }
 
+.item-text{
+    margin-left:-150;
+}
+
+div>.item-text>h1{
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .name{
     font-size: 28px;
     line-height: 17px;
@@ -82,7 +91,7 @@ header > h3{
 form{
     position: fixed;
     display: none;
-    top: 290px;
+    top: 15%;
     background: #FFFFFF;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -104,7 +113,7 @@ form >div> h1{
 }
 
 .yourOrderDiv{
-    border:3px  red solid;
+    display: none;
 }
 
 .yourOrderDiv > h1{
@@ -125,6 +134,10 @@ form >div> h1{
 #total{
     margin-top:10px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
 }
 
 input, button{
@@ -141,7 +154,6 @@ input{
 
 button{
     background: #16DB99;
-    
     color: #FFFFFF;
     font-family: 'Verdana';
     font-style: normal;
@@ -198,6 +210,46 @@ button{
     
 }
 
+.rating{
+    position: fixed;
+    width: 260px;
+    height: 200px;
+    top: 20%;
+    left: 45%;
+    text-align: center;
+    background: #edfcf5;
+    display: none;
+}
+.offerDiv{
+    position: fixed;
+    width: 400px;
+    height: 130px;
+    top: 20%;
+    left: 35%;
+    text-align: center;
+    background: #edfcf5;
+    
+}
+
+.ratingColor{
+    color: #16DB99;
+}
+
+.fa-star{
+    width: 40px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+#ratingBtn, #offerBtn{
+    width: 100px;
+    height: 40px;
+    
+}
 .regular:hover{
     cursor:pointer;
+}
+
+.remove:hover{
+    cursor: pointer;
 }

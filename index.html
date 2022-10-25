@@ -20,27 +20,50 @@
 
         </div>
 
-        <form action="">
+        <form action="" id="paymentform">
             <div class="formdiv">
                 <h1>Enter card details</h1>
                 <input type="text" name="name" id="name" required placeholder="Enter your name">
-                <input type="text" name="cardnumber" id="cardnumber" required placeholder="Enter card number">
-                <input type="text" name="cvv" id="cvv" required placeholder="Enter cvv">
+                <input type="text" name="cardnumber"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                minlength="16"
+                maxlength="16"
+                id="cardnumber" required placeholder="Enter card number">
+                <input type="text" name="cvv" id="cvv" 
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                minlength="3"
+                maxlength="3"
+                required placeholder="Enter cvv">
                 <button id="pay">Pay</button>
             </div>
         </form>
-        <h1 id="thanks">Thanks, James! You order is on its way</h1>
-        <div class="yourOrderDiv">
-            <h1>Your Order</h1>
+        <h1 id="thanks">Thanks, ! You order is on its way</h1>
+        <div class="yourOrderDiv" id="yourOrderDiv" >
+            <h1 class="eachItem-details name">Your Order</h1>
             <div id="toCheckOut">
 
             </div>
-            <div id="total">
+            <div id="total" >
 
             </div>
-            <button id="pay">Complete Order</button>
+            <button id="pay" data-pay="pay">Complete Order</button>
         </div>
-    </div>
+        <div class="rating" id="ratingDiv">
+            <h2>Please rate your experience</h2>
+            <div>
+                <span class="fa fa-star" id="star1"></span>
+                <span class="fa fa-star" id="star2"></span>
+                <span class="fa fa-star" id="star3"></span>
+                <span class="fa fa-star" id="star4"></span>
+                <span class="fa fa-star" id="star5"></span>
+            </div>
+            <button id="ratingBtn" data-rating="rating">Submit</button>
+        </div>
+        <div class="offerDiv" id="offerDiv">
+            <h2 class="eachItem-details name" id="blinker">Spend $30 or more and earn a 10% discount</h2> 
+            <button id="offerBtn" data-rating="offer">Ok</button>
+        </div>
+
     <body>
 	<script src="index.js" type="module"></script>
     </body>
