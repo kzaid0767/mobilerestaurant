@@ -52,19 +52,21 @@ header > h3{
 
 .eachItem{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     border-bottom: 1px solid #D2D2D2;;
+}
+
+.item-text{
+    width: 200px;
+    margin-left: -100px;
 }
 
 .eachItem-details{
     font-weight: 400;
 }
 
-.item-text{
-    margin-left:-170px;
-    
-}
+
 
 
 
