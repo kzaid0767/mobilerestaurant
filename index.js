@@ -244,12 +244,13 @@ function getHTML(){
     let feedHtml = ``
 
     menuArray.forEach(item=>
+        
         feedHtml += `
         <div class="eachItem">
             <img src="${item.emoji}" class="emoji" alt="${item.name}">
             <div class="item-text">
                 <h1 class="eachItem-details name">${item.name}</h1>
-                <p class="eachItem-details ingredients">${item.ingredients}</p>
+                <p class="eachItem-details ingredients prightmargin">${item.ingredients}</p>
                 <h3 class="eachItem-details price">$${item.price}</h3>
             </div>
             <div>

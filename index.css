@@ -62,8 +62,11 @@ header > h3{
 }
 
 .item-text{
-    margin-left:-150;
+    margin-left:-170px;
+    
 }
+
+
 
 div>.item-text>h1{
     margin-left: 0;
